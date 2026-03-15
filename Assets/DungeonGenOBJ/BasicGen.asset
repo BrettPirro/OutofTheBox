@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b51e5649a7964104e8488175d70f677e, type: 3}
   m_Name: BasicGen
   m_EditorClassIdentifier: 
-  iterations: 10
-  walkLength: 10
+  iterations: 15
+  walkLength: 15
   startRandomEachIteration: 1
