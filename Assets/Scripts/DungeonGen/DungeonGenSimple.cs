@@ -7,9 +7,8 @@ using Random = UnityEngine.Random;
 public class DungeonGenSimple : AbstractDungeonGen
 {
 
-    [SerializeField] private int iterations = 10;
-    [SerializeField] private int walkLength = 10;
-    [SerializeField] public bool startRandomEachIteration = true;
+
+    [SerializeField] public SimpleRandomWalkSO randomWalkParmameters;
 
 
 
@@ -25,11 +24,11 @@ public class DungeonGenSimple : AbstractDungeonGen
     {
         var currentPos = startPos;
         HashSet<Vector2Int> floorpos = new HashSet<Vector2Int>();
-        for (int i = 0; i < iterations; i++)
+        for (int i = 0; i < randomWalkParmameters.iterations; i++)
         {
-            var path = ProceduralGenAlgo.SimpleRandomWalk(currentPos, walkLength);
+            var path = ProceduralGenAlgo.SimpleRandomWalk(currentPos, randomWalkParmameters.walkLength);
             floorpos.UnionWith(path);
-            if (startRandomEachIteration)
+            if (randomWalkParmameters.startRandomEachIteration)
                 currentPos = floorpos.ElementAt(Random.Range(0, floorpos.Count));
         }
         return floorpos;
