@@ -1,16 +1,32 @@
+using System;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class WallGen : MonoBehaviour
+public static class WallGen 
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+
+    public static void CreateWalls(HashSet<Vector2Int> floorPositions, TilemapVisualizer tilemapVisualizer) 
     {
-        
+        var basicWallPosition = FindWallsinDirection(floorPositions, direction2D.cardnialDir);
+        foreach(var pos in basicWallPosition) 
+        {
+            tilemapVisualizer.PaintSingleBasicWall(pos);
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    private static HashSet<Vector2Int> FindWallsinDirection(HashSet<Vector2Int> floorPositions, List<Vector2Int> directionList)
     {
-        
+        HashSet<Vector2Int> wallPos = new HashSet<Vector2Int>();
+
+        foreach(var position in floorPositions) 
+        {
+            foreach (var dir in directionList)
+            {
+                var neighborPos = position + dir;
+                if (floorPositions.Contains(neighborPos) == false) { wallPos.Add(neighborPos); }
+            }
+        }
+
+        return wallPos;
     }
 }

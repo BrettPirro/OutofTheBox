@@ -8,27 +8,28 @@ public class DungeonGenSimple : AbstractDungeonGen
 {
 
 
-    [SerializeField] public SimpleRandomWalkSO randomWalkParmameters;
+    [SerializeField] protected SimpleRandomWalkSO randomWalkParmameters;
 
 
 
 
     protected override void RunProceduralGen() 
     {
-        HashSet<Vector2Int> floorPos = RunRandWalk();
+        HashSet<Vector2Int> floorPos = RunRandWalk(randomWalkParmameters,startPos);
         tileMapVis.Clear();
         tileMapVis.PaintFloorTiles(floorPos);
+        WallGen.CreateWalls(floorPos, tileMapVis);
     }
 
-    protected HashSet<Vector2Int> RunRandWalk()
+    protected HashSet<Vector2Int> RunRandWalk(SimpleRandomWalkSO simpleRandomWalkSO, Vector2Int pos)
     {
-        var currentPos = startPos;
+        var currentPos = pos;
         HashSet<Vector2Int> floorpos = new HashSet<Vector2Int>();
-        for (int i = 0; i < randomWalkParmameters.iterations; i++)
+        for (int i = 0; i < simpleRandomWalkSO.iterations; i++)
         {
-            var path = ProceduralGenAlgo.SimpleRandomWalk(currentPos, randomWalkParmameters.walkLength);
+            var path = ProceduralGenAlgo.SimpleRandomWalk(currentPos, simpleRandomWalkSO.walkLength);
             floorpos.UnionWith(path);
-            if (randomWalkParmameters.startRandomEachIteration)
+            if (simpleRandomWalkSO.startRandomEachIteration)
                 currentPos = floorpos.ElementAt(Random.Range(0, floorpos.Count));
         }
         return floorpos;
