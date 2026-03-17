@@ -35,6 +35,66 @@ public static class ProceduralGenAlgo
     
     }
 
+
+    public static List<BoundsInt> BinarySpacePartitioning(BoundsInt spaceToSplit, int minWidth, int minHeight) 
+    {
+        Queue<BoundsInt> RoomQue = new Queue<BoundsInt>();
+
+        List<BoundsInt> roomsList = new List<BoundsInt>();
+
+        RoomQue.Enqueue(spaceToSplit);
+
+        while (RoomQue.Count > 0) 
+        {
+            var room = RoomQue.Dequeue();
+            if(room.size.y>= minHeight && room.size.x >= minWidth) 
+            {
+                if (Random.value < .5f) 
+                {
+                    if(room.size.y>= minHeight * 2) 
+                    {
+                        SplitHorizontally(minWidth, minHeight, RoomQue, room);
+                    }
+                    else if(room.size.x >= minWidth * 2) 
+                    {
+                        SplitVertically(minWidth, minHeight, RoomQue, room);
+                    }
+                    else 
+                    {
+                        roomsList.Add(room);
+                    }
+                }
+                else 
+                {
+              
+                    if (room.size.x >= minWidth * 2)
+                    {
+                        SplitVertically(minWidth, minHeight, RoomQue, room);
+                    }
+                    else if (room.size.y >= minHeight * 2)
+                    {
+                        SplitHorizontally(minWidth, minHeight, RoomQue, room);
+                    }
+                    else
+                    {
+                        roomsList.Add(room);
+                    }
+                }
+            }
+        }
+        return roomsList;
+    
+    }
+
+    private static void SplitVertically(int minWidth, int minHeight, Queue<BoundsInt> roomQue, BoundsInt room)
+    {
+        throw new System.NotImplementedException();
+    }
+
+    private static void SplitHorizontally(int minWidth, int minHeight, Queue<BoundsInt> roomQue, BoundsInt room)
+    {
+        throw new System.NotImplementedException();
+    }
 }
 
 
