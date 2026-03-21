@@ -30,7 +30,17 @@ public class BinaryRoomGen : DungeonGenSimple
 
         HashSet<Vector2Int> floor = new HashSet<Vector2Int>();
 
-        floor = CreateSimpleRoom(roomList);
+        if (randomWalkRooms)
+        {
+            floor = CreateRoomsRandomly(roomList);
+        }
+        else 
+        {
+            floor = CreateSimpleRoom(roomList);
+
+        }
+
+
 
         List<Vector2Int> roomCenters = new List<Vector2Int>();
 
@@ -51,8 +61,25 @@ public class BinaryRoomGen : DungeonGenSimple
         WallGen.CreateWalls(floor, tileMapVis);
     }
 
+    private HashSet<Vector2Int> CreateRoomsRandomly(List<BoundsInt> roomList)
+    {
+        HashSet<Vector2Int> floor = new HashSet<Vector2Int>();
+        for (int i = 0; i < roomList.Count; i++)
+        {
+            var roomBounds = roomList[i];
+            var roomCenter = new Vector2Int(Mathf.RoundToInt(roomBounds.center.x), Mathf.RoundToInt(roomBounds.center.y));
+            var roomFloor = RunRandWalk(randomWalkParmameters, roomCenter);
+            foreach (var pos in roomFloor)
+            {
+                if(pos.x>=(roomBounds.xMin+offset)&& pos.x <= (roomBounds.xMax - offset) && pos.y >= (roomBounds.yMin - offset)&& pos.y <= (roomBounds.yMax - offset)) 
+                {
+                    floor.Add(pos);
+                }
+            }
+        }
+        return floor;
+    }
 
-    
     private HashSet<Vector2Int> ConnectRooms(List<Vector2Int> roomCenters)
     {
         HashSet<Vector2Int> corridors = new HashSet<Vector2Int>();

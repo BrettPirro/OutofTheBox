@@ -5,12 +5,44 @@ using UnityEngine;
 public static class WallGen 
 {
 
-    public static void CreateWalls(HashSet<Vector2Int> floorPositions, TilemapVisualizer tilemapVisualizer) 
+    public static void CreateWalls(HashSet<Vector2Int> floorPositions, TilemapVisualizer tilemapVisualizer)
     {
         var basicWallPosition = FindWallsinDirection(floorPositions, direction2D.cardnialDir);
-        foreach(var pos in basicWallPosition) 
+        var cornerWallPos = FindWallsinDirection(floorPositions, direction2D.diagonalDir);
+        CreateBasicWalls(tilemapVisualizer, basicWallPosition,floorPositions);
+        CreateCornerWalls(tilemapVisualizer, cornerWallPos, floorPositions);
+    }
+
+    private static void CreateCornerWalls(TilemapVisualizer tilemapVisualizer, HashSet<Vector2Int> cornerWallPos, HashSet<Vector2Int> floorPositions)
+    {
+        foreach (var pos in cornerWallPos)
         {
-            tilemapVisualizer.PaintSingleBasicWall(pos);
+            string neighborsBinary = "";
+            foreach (var dir in direction2D.eightdirlist)
+            {
+                var neighborPos = pos + dir;
+                if (floorPositions.Contains(neighborPos)) { neighborsBinary += "1"; }
+                else { neighborsBinary += "0"; }
+            }
+            tilemapVisualizer.PaintSingleCornerWall(pos, neighborsBinary);
+        }
+    }
+
+    private static void CreateBasicWalls(TilemapVisualizer tilemapVisualizer, HashSet<Vector2Int> basicWallPosition, HashSet<Vector2Int> floorPositions)
+    {
+        foreach (var pos in basicWallPosition)
+        {
+            string neighborsBinary = "";
+
+            foreach (var dir in direction2D.cardnialDir)
+            {
+                var neighborPos = pos + dir;
+                if (floorPositions.Contains(neighborPos)) { neighborsBinary += "1"; }
+                else { neighborsBinary += "0"; }
+            }
+            
+
+                tilemapVisualizer.PaintSingleBasicWall(pos,neighborsBinary);
         }
     }
 

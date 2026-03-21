@@ -36,8 +36,13 @@ public class TilemapVisualizer : MonoBehaviour
         wallTileMap.ClearAllTiles();
     }
 
-    internal void PaintSingleBasicWall(Vector2Int pos)
+    internal void PaintSingleBasicWall(Vector2Int pos,string binarytype)
     {
         PaintSingleTile(wallTileMap, wallTopTile,pos);
+    }
+
+    internal void PaintSingleCornerWall(Vector2Int pos, string neighborsBinary)
+    {
+        throw new NotImplementedException();
     }
 }

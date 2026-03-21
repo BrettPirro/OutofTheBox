@@ -124,6 +124,31 @@ public static class direction2D
         
     };
 
+    public static List<Vector2Int> diagonalDir = new List<Vector2Int>
+    {
+        new Vector2Int(1,1) , //UP-RIGHT
+        new Vector2Int(1,-1) , //Right DOWN
+        new Vector2Int(-1,-1) , //Down LEFT
+        new Vector2Int(-1,1) , //Left UP
+
+
+        
+    };
+
+    public static List<Vector2Int> eightdirlist = new List<Vector2Int> 
+    {
+        new Vector2Int(0,1) , //UP
+        new Vector2Int(1,1) , //UP-RIGHT
+        new Vector2Int(1,0) , //Right
+        new Vector2Int(1,-1) , //Right DOWN
+        new Vector2Int(0,-1) , //Down
+        new Vector2Int(-1,-1) , //Down LEFT
+        new Vector2Int(-1,0) , //Left
+        new Vector2Int(-1,1) , //Left UP
+
+    
+    };
+
     public static Vector2Int GetRandonDir() 
     {
         return cardnialDir[Random.Range(0, cardnialDir.Count)];
