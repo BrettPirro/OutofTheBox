@@ -186,7 +186,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 1038100930387280788, guid: 7d0b8fa4d74067c419f6223dcd026e92, type: 3}
   playerPrefab: {fileID: 5277132810321864841, guid: 82ce432be6828db42b26cd328ac7ad3f, type: 3}
+  EndLevel: {fileID: 433579530035616436, guid: 68231a35e79aefe4eaa68b259d5c65b1, type: 3}
   playerRoomIndex: 0
   vCamera: {fileID: 0}
-  roomEnemiesCount: 
+  maxEnemySpawnPerRoom: 6
   showGizmo: 0

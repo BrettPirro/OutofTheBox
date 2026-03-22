@@ -32,8 +32,7 @@ public class BinaryRoomGen : DungeonGenSimple
 
     protected override void RunProceduralGen()
     {
- 
-
+        dungeonData.Reset();
         CreateRooms();
     }
 

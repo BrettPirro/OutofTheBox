@@ -13,6 +13,9 @@ public class DungeonData : MonoBehaviour
     public HashSet<Vector2Int> Path { get; set; } = new HashSet<Vector2Int>();
 
     public GameObject PlayerReference { get; set; }
+
+    public GameObject EndLevelObject { get; set; }
+
     public void Reset()
     {
         foreach (Room room in Rooms)
@@ -28,6 +31,7 @@ public class DungeonData : MonoBehaviour
         }
         Rooms = new();
         Path = new();
+        Destroy(EndLevelObject);
         Destroy(PlayerReference);
     }
 

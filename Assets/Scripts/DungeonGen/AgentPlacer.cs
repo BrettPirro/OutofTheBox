@@ -12,7 +12,7 @@ using NUnit.Framework.Constraints;
 public class AgentPlacer : MonoBehaviour
 {
     [SerializeField]
-    private GameObject enemyPrefab, playerPrefab;
+    private GameObject enemyPrefab, playerPrefab,EndLevel;
 
     [SerializeField]
     private int playerRoomIndex;
@@ -66,6 +66,13 @@ public class AgentPlacer : MonoBehaviour
             if (roomEnemiesCount.Count > i && i != playerRoomIndex)
             {
                 PlaceEnemies(room, roomEnemiesCount[i]);
+            }
+
+            if (i == dungeonData.Rooms.Count-1) 
+            {
+                GameObject box = Instantiate(EndLevel);
+                box.transform.localPosition = dungeonData.Rooms[dungeonData.Rooms.Count-1].RoomCenterPos + Vector2.one * 0.5f;
+                dungeonData.EndLevelObject = box;
             }
 
             //Place the player
