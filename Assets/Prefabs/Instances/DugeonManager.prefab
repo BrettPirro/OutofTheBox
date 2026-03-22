@@ -48,6 +48,16 @@ MonoBehaviour:
   wallTileMap: {fileID: 0}
   floorTile: {fileID: 11400000, guid: a0f247e1e9b3e6b45a3a2b2f03a1c990, type: 2}
   wallTopTile: {fileID: 11400000, guid: d90e893027783ad4e80ecc0c513bf2af, type: 2}
+  wallSideRightTile: {fileID: 11400000, guid: b3705a1efb8ef1e4dbd42a86b4a56fc9, type: 2}
+  wallSideLeftTile: {fileID: 11400000, guid: a3874010badb10346b034eaad3eea520, type: 2}
+  wallBottpmTile: {fileID: 11400000, guid: a7230182caac72d4ab05ea3c41fb79ce, type: 2}
+  wallFull: {fileID: 11400000, guid: d4bd47086b9582d4bb5179023fdb0192, type: 2}
+  wallinnercornerDownLeft: {fileID: 11400000, guid: 75b1aedfa903c8e42ac1ac61edef4915, type: 2}
+  wallinnercornerDownRight: {fileID: 11400000, guid: c93ee445ceac84c45a13899455f90d10, type: 2}
+  wallDiagonalCornerDownRight: {fileID: 11400000, guid: 1d30009b08be4744fbf6679bec6443a7, type: 2}
+  wallDiagonalCornerDownLeft: {fileID: 11400000, guid: 9e8a872e8b8df0443bc1ca1ac83b8fd7, type: 2}
+  wallDiagonalCornerUpRight: {fileID: 11400000, guid: 83374b9593887514fb8af7c5abbc7e8a, type: 2}
+  wallDiagonalCornerUpLeft: {fileID: 11400000, guid: 4096bd88a7d489f4da436f52edcf7c16, type: 2}
 --- !u!1 &5791241963280140181
 GameObject:
   m_ObjectHideFlags: 0
@@ -58,6 +68,10 @@ GameObject:
   m_Component:
   - component: {fileID: 3217603712399834651}
   - component: {fileID: 4977819403277302215}
+  - component: {fileID: 6228496237258126555}
+  - component: {fileID: 8549020729667833196}
+  - component: {fileID: 5750673925960914900}
+  - component: {fileID: 6568448651664093834}
   m_Layer: 0
   m_Name: DugeonManager
   m_TagString: Untagged
@@ -73,7 +87,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5791241963280140181}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.1427873, y: 0.3355252, z: 0.44942987}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -95,10 +109,84 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tileMapVis: {fileID: 6206925127628754397}
   startPos: {x: 0, y: 0}
-  randomWalkParmameters: {fileID: 11400000, guid: 13d4ef6cfa09b7b4095069180a56e76a, type: 2}
+  randomWalkParmameters: {fileID: 11400000, guid: 92201a9f72768084d800c0e274a50882, type: 2}
   minRoomWidth: 15
   minRoomHeight: 15
   dungeonWidth: 75
   dungeonHeight: 75
   offset: 3
   randomWalkRooms: 0
+  dungeonData: {fileID: 6228496237258126555}
+--- !u!114 &6228496237258126555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5791241963280140181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d26ca194a6ff33a47afcd10b78031393, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8549020729667833196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5791241963280140181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 987a1728a8cca3e4a833edcded206f26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  showGizmo: 0
+--- !u!114 &5750673925960914900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5791241963280140181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e25786ef70262149920a00234475ab2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  propsToPlace: []
+  cornerPropPlacementChance: 0.7
+  propPrefab: {fileID: 6503075044173358139, guid: ed1d63dad18175f4caa65495d478c58d, type: 3}
+  OnFinished:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6568448651664093834}
+        m_TargetAssemblyTypeName: AgentPlacer, Assembly-CSharp
+        m_MethodName: PlaceAgents
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &6568448651664093834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5791241963280140181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b17ef05fe87a084bbefd1377b4b7a67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyPrefab: {fileID: 1038100930387280788, guid: 7d0b8fa4d74067c419f6223dcd026e92, type: 3}
+  playerPrefab: {fileID: 5277132810321864841, guid: 82ce432be6828db42b26cd328ac7ad3f, type: 3}
+  playerRoomIndex: 0
+  vCamera: {fileID: 0}
+  roomEnemiesCount: 
+  showGizmo: 0

@@ -18,9 +18,22 @@ public class BinaryRoomGen : DungeonGenSimple
     [SerializeField]
     bool randomWalkRooms = false;
 
+    [SerializeField] DungeonData dungeonData;
+
+
+    private void Awake()
+    {
+        tileMapVis.Clear();
+        RunProceduralGen();
+        this.GetComponent<RoomDataExtractor>().ProcessRooms();
+
+    }
+
 
     protected override void RunProceduralGen()
     {
+ 
+
         CreateRooms();
     }
 
@@ -56,7 +69,6 @@ public class BinaryRoomGen : DungeonGenSimple
 
 
         floor.UnionWith(corridors);
-
         tileMapVis.PaintFloorTiles(floor);
         WallGen.CreateWalls(floor, tileMapVis);
     }
@@ -69,6 +81,7 @@ public class BinaryRoomGen : DungeonGenSimple
             var roomBounds = roomList[i];
             var roomCenter = new Vector2Int(Mathf.RoundToInt(roomBounds.center.x), Mathf.RoundToInt(roomBounds.center.y));
             var roomFloor = RunRandWalk(randomWalkParmameters, roomCenter);
+            dungeonData.Rooms.Add(new Room(roomCenter, roomFloor));
             foreach (var pos in roomFloor)
             {
                 if(pos.x>=(roomBounds.xMin+offset)&& pos.x <= (roomBounds.xMax - offset) && pos.y >= (roomBounds.yMin - offset)&& pos.y <= (roomBounds.yMax - offset)) 
@@ -94,6 +107,8 @@ public class BinaryRoomGen : DungeonGenSimple
             currentRoomCenter = closet;
             corridors.UnionWith(newCorridor);
         }
+
+        dungeonData.Path = corridors;
         return corridors;
 
     }
@@ -178,16 +193,22 @@ public class BinaryRoomGen : DungeonGenSimple
 
         foreach (var room in roomList)
         {
+            HashSet<Vector2Int> floorCurrent = new HashSet<Vector2Int>();
+
             for (int col = offset; col < room.size.x-offset; col++)
             {
                 for (int row = offset; row < room.size.y - offset; row++)
                 {
                     Vector2Int pos = (Vector2Int)room.min + new Vector2Int(col, row);
                     floor.Add(pos);
+                    floorCurrent.Add(pos);
                 }
 
 
             }
+            dungeonData.Rooms.Add(new Room(room.center, floorCurrent));
+
+
         }
         return floor;
     }
