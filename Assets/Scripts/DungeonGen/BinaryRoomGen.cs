@@ -21,7 +21,7 @@ public class BinaryRoomGen : DungeonGenSimple
     [SerializeField] DungeonData dungeonData;
 
 
-    private void Awake()
+    private void Start()
     {
         tileMapVis.Clear();
         RunProceduralGen();

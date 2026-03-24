@@ -47,17 +47,9 @@ MonoBehaviour:
   floorTileMap: {fileID: 0}
   wallTileMap: {fileID: 0}
   floorTile: {fileID: 11400000, guid: a0f247e1e9b3e6b45a3a2b2f03a1c990, type: 2}
-  wallTopTile: {fileID: 11400000, guid: d90e893027783ad4e80ecc0c513bf2af, type: 2}
-  wallSideRightTile: {fileID: 11400000, guid: b3705a1efb8ef1e4dbd42a86b4a56fc9, type: 2}
-  wallSideLeftTile: {fileID: 11400000, guid: a3874010badb10346b034eaad3eea520, type: 2}
-  wallBottpmTile: {fileID: 11400000, guid: a7230182caac72d4ab05ea3c41fb79ce, type: 2}
-  wallFull: {fileID: 11400000, guid: d4bd47086b9582d4bb5179023fdb0192, type: 2}
-  wallinnercornerDownLeft: {fileID: 11400000, guid: 75b1aedfa903c8e42ac1ac61edef4915, type: 2}
-  wallinnercornerDownRight: {fileID: 11400000, guid: c93ee445ceac84c45a13899455f90d10, type: 2}
-  wallDiagonalCornerDownRight: {fileID: 11400000, guid: 1d30009b08be4744fbf6679bec6443a7, type: 2}
-  wallDiagonalCornerDownLeft: {fileID: 11400000, guid: 9e8a872e8b8df0443bc1ca1ac83b8fd7, type: 2}
-  wallDiagonalCornerUpRight: {fileID: 11400000, guid: 83374b9593887514fb8af7c5abbc7e8a, type: 2}
-  wallDiagonalCornerUpLeft: {fileID: 11400000, guid: 4096bd88a7d489f4da436f52edcf7c16, type: 2}
+  tiles:
+  - {fileID: 11400000, guid: 28f7bcf36bd67fd4682984d6c12ecb93, type: 2}
+  - {fileID: 11400000, guid: 4cbcfd44c0477cb4088f2f905f843357, type: 2}
 --- !u!1 &5791241963280140181
 GameObject:
   m_ObjectHideFlags: 0
