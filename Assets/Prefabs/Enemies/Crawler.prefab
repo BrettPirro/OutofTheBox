@@ -478,6 +478,7 @@ GameObject:
   - component: {fileID: 7323632132600117907}
   - component: {fileID: 6282053127348130291}
   - component: {fileID: 7512611272494552863}
+  - component: {fileID: -8394672521064860034}
   m_Layer: 0
   m_Name: Crawler
   m_TagString: Untagged
@@ -565,6 +566,28 @@ CapsuleCollider2D:
   m_Offset: {x: 0.08318746, y: 1.7192044}
   m_Size: {x: 3.0325916, y: 3.0325918}
   m_Direction: 0
+--- !u!95 &-8394672521064860034
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5204413739882061831}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f921f68cab50fd44294ec4cf48b4bf27, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &5341220001054082334
 GameObject:
   m_ObjectHideFlags: 0

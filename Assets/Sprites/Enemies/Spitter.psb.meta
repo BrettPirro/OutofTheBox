@@ -97,8 +97,8 @@ ScriptedImporter:
   layeredSpriteImportData:
   - name: Head
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
+    pivot: {x: 0.8476545, y: 0.37059394}
+    alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
@@ -119,8 +119,8 @@ ScriptedImporter:
     spritePosition: {x: 746, y: 947}
   - name: Neck
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
+    pivot: {x: 0.688687, y: 0.33068794}
+    alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
@@ -141,8 +141,8 @@ ScriptedImporter:
     spritePosition: {x: 839, y: 921}
   - name: Chest
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
+    pivot: {x: 0.55618674, y: 0.4792754}
+    alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
@@ -163,8 +163,8 @@ ScriptedImporter:
     spritePosition: {x: 871, y: 815}
   - name: Thigh copy
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
+    pivot: {x: 0.35001075, y: 0.87040174}
+    alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
@@ -185,8 +185,8 @@ ScriptedImporter:
     spritePosition: {x: 1019, y: 418}
   - name: Foreleg copy
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
+    pivot: {x: 0.30091396, y: 0.9252041}
+    alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
@@ -207,8 +207,8 @@ ScriptedImporter:
     spritePosition: {x: 1075, y: 0}
   - name: Trso
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
+    pivot: {x: 0.59980536, y: 0.11793132}
+    alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
@@ -229,14 +229,14 @@ ScriptedImporter:
     spritePosition: {x: 934, y: 672}
   - name: Thigh
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
+    pivot: {x: 0.5679679, y: 0.8858266}
+    alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
       serializedVersion: 2
-      x: 265
-      y: 428
+      x: 266
+      y: 427
       width: 93
       height: 308
     spriteID: df7dc0a59f20ee649a52c6c2c54cb82a
@@ -251,8 +251,8 @@ ScriptedImporter:
     spritePosition: {x: 940, y: 424}
   - name: Foreleg
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
+    pivot: {x: 0.62641996, y: 0.9431794}
+    alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
