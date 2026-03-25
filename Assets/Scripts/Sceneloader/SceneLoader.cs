@@ -10,7 +10,7 @@ public class SceneLoader : MonoBehaviour
 
     public static SceneLoader current;
 
-    private void Start()
+    private void Awake()
     {
         current = this;
     }
@@ -23,8 +23,18 @@ public class SceneLoader : MonoBehaviour
         
     }
 
-    
-    
+    public void loadNextLevel(float delay)
+    {
+        current.StartCoroutine(current.LoadNextLevel(delay));
+
+    }
+
+    public void blackOut() 
+    {
+        canvasGroup.alpha = 1;
+    }
+
+
 
     public static void loadScenebyName(string name)
     {
@@ -75,6 +85,16 @@ public class SceneLoader : MonoBehaviour
         loading = true;
         yield return FadeSceneIn(delay);
         yield return SceneManager.LoadSceneAsync(name);
+        yield return FadeSceneOut(delay);
+        loading = false;
+    }
+
+
+    IEnumerator LoadNextLevel(float delay)
+    {
+
+        loading = true;
+        yield return FadeSceneIn(delay);
         yield return FadeSceneOut(delay);
         loading = false;
     }

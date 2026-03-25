@@ -401,14 +401,26 @@ PrefabInstance:
       objectReference: {fileID: 1426426508}
     - target: {fileID: 6206925127628754397, guid: 7953c5976530651458bf3eb75f198881, type: 3}
       propertyPath: tiles.Array.size
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6206925127628754397, guid: 7953c5976530651458bf3eb75f198881, type: 3}
       propertyPath: 'tiles.Array.data[0]'
       value: 
-      objectReference: {fileID: 11400000, guid: 28f7bcf36bd67fd4682984d6c12ecb93, type: 2}
+      objectReference: {fileID: 11400000, guid: 4cbcfd44c0477cb4088f2f905f843357, type: 2}
     - target: {fileID: 6206925127628754397, guid: 7953c5976530651458bf3eb75f198881, type: 3}
       propertyPath: 'tiles.Array.data[1]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 28f7bcf36bd67fd4682984d6c12ecb93, type: 2}
+    - target: {fileID: 6206925127628754397, guid: 7953c5976530651458bf3eb75f198881, type: 3}
+      propertyPath: 'tiles.Array.data[2]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 010aa288c2fbc8149a5db2d25d4cf9a3, type: 2}
+    - target: {fileID: 6206925127628754397, guid: 7953c5976530651458bf3eb75f198881, type: 3}
+      propertyPath: 'tiles.Array.data[3]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 4acae2885c9388f4590159ff8c61e370, type: 2}
+    - target: {fileID: 6206925127628754397, guid: 7953c5976530651458bf3eb75f198881, type: 3}
+      propertyPath: 'tiles.Array.data[4]'
       value: 
       objectReference: {fileID: 11400000, guid: 4cbcfd44c0477cb4088f2f905f843357, type: 2}
     - target: {fileID: 6568448651664093834, guid: 7953c5976530651458bf3eb75f198881, type: 3}
@@ -471,7 +483,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &619394801
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4667,7 +4679,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1225016708
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16945,11 +16957,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3263986861144576857, guid: 92a09f32d04ca7f41ad41097e1c4d7e2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 43.54
+      value: 42.84
       objectReference: {fileID: 0}
     - target: {fileID: 3263986861144576857, guid: 92a09f32d04ca7f41ad41097e1c4d7e2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 26.6
+      value: 44.71
       objectReference: {fileID: 0}
     - target: {fileID: 3263986861144576857, guid: 92a09f32d04ca7f41ad41097e1c4d7e2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -17058,11 +17070,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8206688417677762689, guid: b6d0e5f1d7f772448b76c98bb53ff93e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 43.54
+      value: 42.84
       objectReference: {fileID: 0}
     - target: {fileID: 8206688417677762689, guid: b6d0e5f1d7f772448b76c98bb53ff93e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 26.6
+      value: 44.71
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

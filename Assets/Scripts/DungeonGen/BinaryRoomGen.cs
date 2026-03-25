@@ -23,15 +23,22 @@ public class BinaryRoomGen : DungeonGenSimple
 
     private void Start()
     {
-        tileMapVis.Clear();
-        RunProceduralGen();
-        this.GetComponent<RoomDataExtractor>().ProcessRooms();
+        
+        NextLevel();
 
     }
 
+    public void NextLevel()
+    {
+        tileMapVis.Clear();
+        RunProceduralGen();
+        this.GetComponent<RoomDataExtractor>().ProcessRooms();
+    }
 
     protected override void RunProceduralGen()
     {
+        SceneLoader.current.blackOut();
+        SceneLoader.current.loadNextLevel(4f);
         dungeonData.Reset();
         CreateRooms();
     }
