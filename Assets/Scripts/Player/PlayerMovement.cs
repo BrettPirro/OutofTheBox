@@ -12,8 +12,10 @@ namespace Box.Player
         [SerializeField][Range(0, 100)] float speed = 7f;
         Rigidbody2D rb;
         [SerializeField] Transform body;
+        Animator animator;
         private void Awake()
         {
+            animator = GetComponent<Animator>();
             rb = GetComponent<Rigidbody2D>();
         }
 
@@ -21,8 +23,9 @@ namespace Box.Player
         public void updatePlayerVelocity(Vector2 playerInput)
         {
             rb.linearVelocity = playerInput * speed;
-            if (playerInput.x != 0) { body.transform.localScale = new Vector2(playerInput.x, 1); }
-        
+            if (playerInput.x != 0) { body.transform.localScale = new Vector2(-(Mathf.Sign(playerInput.x)), 1); }
+            animator.SetBool("Walking",playerInput!=Vector2.zero);
+
         }
 
 

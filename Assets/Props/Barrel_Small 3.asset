@@ -25,3 +25,4 @@ MonoBehaviour:
   PlaceAsGroup: 1
   GroupMinCount: 1
   GroupMaxCount: 5
+  isDestructable: 1

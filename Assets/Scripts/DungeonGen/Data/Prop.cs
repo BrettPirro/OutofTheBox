@@ -31,4 +31,7 @@ public class Prop : ScriptableObject
     [Min(1)]
     public int GroupMaxCount = 1;
 
+    [Space, Header("Type:")]
+    public bool isDestructable=false;
+
 }

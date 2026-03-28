@@ -16,7 +16,7 @@ public class PropPlacementManager : MonoBehaviour
     private float cornerPropPlacementChance = 0.7f;
 
     [SerializeField]
-    private GameObject propPrefab;
+    private GameObject propPrefab,propPrefabDestruct;
 
     public UnityEvent OnFinished;
 
@@ -277,8 +277,12 @@ public class PropPlacementManager : MonoBehaviour
 
     private GameObject PlacePropGameObjectAt(Room room, Vector2Int placementPostion, Prop propToPlace)
     {
+        GameObject prop;
         //Instantiat the prop at this positon
-        GameObject prop = Instantiate(propPrefab,this.transform);
+
+        if (propToPlace.isDestructable) { prop = Instantiate(propPrefabDestruct, this.transform); }
+        else { prop = Instantiate(propPrefab, this.transform); }
+
         SpriteRenderer propSpriteRenderer = prop.GetComponentInChildren<SpriteRenderer>();
 
         //set the sprite

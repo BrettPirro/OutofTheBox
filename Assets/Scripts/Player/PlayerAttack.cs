@@ -14,6 +14,7 @@ namespace Box.Player
 
         public void playerMeleeAttack() 
         {
+            playerAnimator.SetTrigger("Attack");
             Debug.Log("Attack");
         }
 
