@@ -78,12 +78,24 @@ public class AgentPlacer : MonoBehaviour
             //Place the player
             if (i == playerRoomIndex)
             {
-                GameObject player = Instantiate(playerPrefab);
-                player.transform.localPosition = dungeonData.Rooms[i].RoomCenterPos + Vector2.one * 0.5f;
-                //Make the camera follow the player
-                vCamera.Follow = player.transform;
-                vCamera.LookAt = player.transform;
-                dungeonData.PlayerReference = player;
+                if (dungeonData.PlayerReference != null) 
+                {
+                    dungeonData.PlayerReference.transform.localPosition = dungeonData.Rooms[i].RoomCenterPos + Vector2.one * 0.5f;
+                    
+                }
+                else 
+                {
+                    GameObject player = Instantiate(playerPrefab);
+                    player.transform.localPosition = dungeonData.Rooms[i].RoomCenterPos + Vector2.one * 0.5f;
+                    //Make the camera follow the player
+                    vCamera.Follow = player.transform;
+                    vCamera.LookAt = player.transform;
+                    dungeonData.PlayerReference = player;
+
+                }
+
+
+              
             }
         }
     }

@@ -32,7 +32,6 @@ public class DungeonData : MonoBehaviour
         Rooms = new();
         Path = new();
         Destroy(EndLevelObject);
-        Destroy(PlayerReference);
     }
 
 

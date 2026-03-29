@@ -9,8 +9,13 @@ public class DestructableItem : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "PlayerMelee") { Destroy(this.transform.parent.gameObject); Debug.Log("Worked"); }
-    }
 
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "PlayerRange") { Destroy(this.transform.parent.gameObject); Debug.Log("Worked"); }
+
+    }
 
 }
 

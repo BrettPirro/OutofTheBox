@@ -6,6 +6,10 @@ TagManager:
   tags:
   - PlayerMelee
   - PlayerRange
+  - Floor
+  - Wall
+  - Enemy
+  - DestructProp
   layers:
   - Default
   - TransparentFX

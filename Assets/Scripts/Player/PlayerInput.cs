@@ -19,7 +19,6 @@ namespace Box.Player
         Action playerRangeAttacking;
 
 
-
         private void Awake()
         {
             inputs = new InputSystem_Actions();
@@ -52,6 +51,7 @@ namespace Box.Player
 
         private void FixedUpdate()
         {
+
             var inputVelocity = move.ReadValue<Vector2>();
             var tranformedVelocity = ((MathF.Abs(inputVelocity.x) + MathF.Abs(inputVelocity.y)) / 2) > .6 ? (inputVelocity / 1.5f) : inputVelocity;
             updatePlayerVelocity(tranformedVelocity);
@@ -60,7 +60,7 @@ namespace Box.Player
             else if (range.IsPressed()) { playerRangeAttacking(); }
         }
 
-
+    
 
 
     }

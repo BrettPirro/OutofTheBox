@@ -13,6 +13,8 @@ namespace Box.Player
         Rigidbody2D rb;
         public Transform body;
         Animator animator;
+        bool stopMoving = false;
+
         private void Awake()
         {
             animator = GetComponent<Animator>();
@@ -22,6 +24,7 @@ namespace Box.Player
 
         public void updatePlayerVelocity(Vector2 playerInput)
         {
+            if (stopMoving) { rb.linearVelocity = Vector2.zero; return; }
             rb.linearVelocity = playerInput * speed;
             if (playerInput.x != 0) { body.transform.localScale = new Vector2(-(Mathf.Sign(playerInput.x)), 1); }
             animator.SetBool("Walking",playerInput!=Vector2.zero);
@@ -29,7 +32,10 @@ namespace Box.Player
         }
 
 
-
+        public void toggleMovement()
+        {
+            stopMoving = (!stopMoving);
+        }
 
     }
 
