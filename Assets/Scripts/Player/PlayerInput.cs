@@ -13,8 +13,11 @@ namespace Box.Player
         InputSystem_Actions inputs;
         InputAction move;
         InputAction melee;
+        InputAction range;
         Action<Vector2> updatePlayerVelocity;
         Action playerMeleeAttacking;
+        Action playerRangeAttacking;
+
 
 
         private void Awake()
@@ -26,10 +29,13 @@ namespace Box.Player
         {
             move = inputs.Player.Move;
             melee = inputs.Player.Attack;
+            range = inputs.Player.Range;
             melee.Enable();
             move.Enable();
+            range.Enable();
+            playerRangeAttacking += GetComponent<PlayerAttack>().RangeAttack;
             updatePlayerVelocity += GetComponent<PlayerMovement>().updatePlayerVelocity;
-            playerMeleeAttacking += GetComponent<PlayerAttack>().playerMeleeAttack;
+            playerMeleeAttacking += GetComponent<PlayerAttack>().MeleeAttack;
 
         }
 
@@ -37,8 +43,10 @@ namespace Box.Player
         {
             melee.Disable();
             move.Disable();
+            range.Disable();
+            playerRangeAttacking -= GetComponent<PlayerAttack>().RangeAttack;
             updatePlayerVelocity -= GetComponent<PlayerMovement>().updatePlayerVelocity;
-            playerMeleeAttacking -= GetComponent<PlayerAttack>().playerMeleeAttack;
+            playerMeleeAttacking -= GetComponent<PlayerAttack>().MeleeAttack;
 
         }
 
@@ -49,6 +57,7 @@ namespace Box.Player
             updatePlayerVelocity(tranformedVelocity);
 
             if (melee.IsPressed()) { playerMeleeAttacking(); }
+            else if (range.IsPressed()) { playerRangeAttacking(); }
         }
 
 
