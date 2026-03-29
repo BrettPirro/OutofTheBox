@@ -8,6 +8,7 @@ namespace Box.Player
         Animator playerAnimator;
         [SerializeField] GameObject Arrow;
         bool attackInProgress=false;
+        [SerializeField] Transform arrowSpawn;
 
         private void Start()
         {
@@ -41,7 +42,14 @@ namespace Box.Player
 
         public void SpawnArrow() 
         {
-        
+            var currentRot = Quaternion.EulerRotation(new Vector3(90, 0, 0));
+
+            if (transform.localScale.x == 1) { currentRot = transform.rotation; }
+
+
+            GameObject b = Instantiate(Arrow, arrowSpawn.transform.position, currentRot);
+            b.GetComponent<Rigidbody2D>().AddForce((Vector2.left*GetComponent<PlayerMovement>().body.transform.localScale.x) * 1f, ForceMode2D.Impulse);
+            Destroy(b, 2f);
         }
 
     }

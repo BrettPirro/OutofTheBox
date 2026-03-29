@@ -116,6 +116,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 6756031617624322651}
   - {fileID: 4322770331485573808}
   - {fileID: 8912729510366059992}
   - {fileID: 2580277665648816479}
@@ -484,6 +485,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &4693702988338222109
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6756031617624322651}
+  m_Layer: 0
+  m_Name: SpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6756031617624322651
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4693702988338222109}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.5, y: 2.32, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 607857103200445332}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5073982855023280714
 GameObject:
   m_ObjectHideFlags: 0
@@ -1066,7 +1098,6 @@ GameObject:
   - component: {fileID: 2891862243725657253}
   - component: {fileID: 1610238442213898303}
   - component: {fileID: 7130739698615614872}
-  - component: {fileID: 4051104410155139003}
   - component: {fileID: 1919446694255116008}
   - component: {fileID: 3734418183758056747}
   - component: {fileID: 7384813709838871080}
@@ -1194,18 +1225,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 7
   body: {fileID: 607857103200445332}
---- !u!114 &4051104410155139003
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6641856025612166232}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06b167fe85b69754f9bd9e50fa72251c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1919446694255116008
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1230,6 +1249,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06b167fe85b69754f9bd9e50fa72251c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackAmout: 1
+  Arrow: {fileID: 714860255624840309, guid: b26ff3a6d6563434baca92471d31b0c2, type: 3}
+  arrowSpawn: {fileID: 6756031617624322651}
 --- !u!114 &7384813709838871080
 MonoBehaviour:
   m_ObjectHideFlags: 0

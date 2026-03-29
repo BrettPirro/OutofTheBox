@@ -11,7 +11,7 @@ namespace Box.Player
     {
         [SerializeField][Range(0, 100)] float speed = 7f;
         Rigidbody2D rb;
-        [SerializeField] Transform body;
+        public Transform body;
         Animator animator;
         private void Awake()
         {
