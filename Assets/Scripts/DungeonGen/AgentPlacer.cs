@@ -100,11 +100,7 @@ public class AgentPlacer : MonoBehaviour
         }
     }
 
-    /// <summary>
-    /// Places enemies in the positions accessible from the path
-    /// </summary>
-    /// <param name="room"></param>
-    /// <param name="enemysCount"></param>
+
     private void PlaceEnemies(Room room, int enemysCount)
     {
         for (int k = 0; k < enemysCount; k++)
@@ -166,12 +162,7 @@ public class RoomGraph
         }
     }
 
-    /// <summary>
-    /// Creates a map of reachable tiles in our dungeon.
-    /// </summary>
-    /// <param name="startPos">Door position or tile position on the path between rooms inside this room</param>
-    /// <param name="occupiedNodes"></param>
-    /// <returns></returns>
+
     public Dictionary<Vector2Int, Vector2Int> RunBFS(Vector2Int startPos, HashSet<Vector2Int> occupiedNodes)
     {
         //BFS related variuables

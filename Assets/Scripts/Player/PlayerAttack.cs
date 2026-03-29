@@ -9,6 +9,8 @@ namespace Box.Player
         [SerializeField] GameObject Arrow;
         bool attackInProgress=false;
         [SerializeField] Transform arrowSpawn;
+        public int attackAmount = 1;
+        public int rangeAmount = 1;
 
         private void Start()
         {

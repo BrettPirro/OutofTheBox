@@ -1,3 +1,4 @@
+using NavMeshPlus.Components;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -75,6 +76,7 @@ public class PropPlacementManager : MonoBehaviour
             PlaceProps(room, innerProps, room.InnerTiles, PlacementOriginCorner.BottomLeft);
         }
 
+        FindAnyObjectByType<NavMeshSurface>().BuildNavMeshAsync();
         //OnFinished?.Invoke();
         Invoke("RunEvent", 0);
 

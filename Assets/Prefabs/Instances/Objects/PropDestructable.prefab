@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 1871932413900768184}
   - component: {fileID: 5080236487841576676}
   - component: {fileID: 1114090615208579048}
+  - component: {fileID: 4693107132450965732}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: DestructProp
@@ -132,3 +133,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 939e5a6d22b550d4fb86ddb85e94b441, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  items: []
+--- !u!114 &4693107132450965732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7147365893635294939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff

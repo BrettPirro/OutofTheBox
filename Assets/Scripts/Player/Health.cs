@@ -5,7 +5,7 @@ public class Health : MonoBehaviour
 {
     [SerializeField] int maxHealth;
     [SerializeField] float knockBack;
-    [SerializeField]int currentHealth;
+    int currentHealth;
     Rigidbody2D rb;
 
 
@@ -15,10 +15,6 @@ public class Health : MonoBehaviour
         currentHealth = maxHealth;
     }
 
-    public void TestDamage() 
-    {
-        DealDamage(1, 1);
-    }
 
     private void Start()
     {
@@ -39,7 +35,7 @@ public class Health : MonoBehaviour
         if (currentHealth - dealt < 0) { currentHealth = 0; }
         else { currentHealth -= dealt; }
         if (this.tag == "Player") { FindObjectOfType<PlayerHealthUI>().CorrectHearts(currentHealth); }
-
+        if (this.tag == "Enemy") { Destroy(this.gameObject); }
     }
 
     private void KnockBack(int dir) 

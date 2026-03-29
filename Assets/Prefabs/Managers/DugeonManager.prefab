@@ -48,7 +48,10 @@ MonoBehaviour:
   wallTileMap: {fileID: 0}
   floorTile: {fileID: 11400000, guid: a0f247e1e9b3e6b45a3a2b2f03a1c990, type: 2}
   tiles:
+  - {fileID: 11400000, guid: 4cbcfd44c0477cb4088f2f905f843357, type: 2}
   - {fileID: 11400000, guid: 28f7bcf36bd67fd4682984d6c12ecb93, type: 2}
+  - {fileID: 11400000, guid: 010aa288c2fbc8149a5db2d25d4cf9a3, type: 2}
+  - {fileID: 11400000, guid: 4acae2885c9388f4590159ff8c61e370, type: 2}
   - {fileID: 11400000, guid: 4cbcfd44c0477cb4088f2f905f843357, type: 2}
 --- !u!1 &5791241963280140181
 GameObject:
@@ -85,6 +88,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3478985366002576588}
+  - {fileID: 3700055642911810180}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4977819403277302215
@@ -146,9 +150,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e25786ef70262149920a00234475ab2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  propsToPlace: []
+  propsToPlace:
+  - {fileID: 11400000, guid: b98fd88ec5af74f4490e306a9e059a17, type: 2}
+  - {fileID: 11400000, guid: f97d3a4d2651fef4ebfab337e6aa76c6, type: 2}
+  - {fileID: 11400000, guid: 3180f58bc2b5dc74495e44f12286adfa, type: 2}
+  - {fileID: 11400000, guid: 009241f39f5b3cb46875a2b33a8f58df, type: 2}
+  - {fileID: 11400000, guid: 42f967fba561e4543b7a0647ce6b501f, type: 2}
+  - {fileID: 11400000, guid: 17329f381abac6844920a7418472a5b4, type: 2}
+  - {fileID: 11400000, guid: 0d14e3d24809f634b8cbc4e23906c90b, type: 2}
+  - {fileID: 11400000, guid: 6f9c8d2799ea8b04ba61a767b35d98d1, type: 2}
+  - {fileID: 11400000, guid: 06bef14624ea3644fb9ecb1ae3b89277, type: 2}
+  - {fileID: 11400000, guid: 22d84cfd9259d3a418645552aaf33875, type: 2}
+  - {fileID: 11400000, guid: 7da6020753cae024a9dff5b974bfb938, type: 2}
+  - {fileID: 11400000, guid: 2ce8670a5ae5b194cbe2bf80837014ab, type: 2}
   cornerPropPlacementChance: 0.7
   propPrefab: {fileID: 6503075044173358139, guid: ed1d63dad18175f4caa65495d478c58d, type: 3}
+  propPrefabDestruct: {fileID: 6503075044173358139, guid: 6883d66a944305f4a99ad8529824b594, type: 3}
   OnFinished:
     m_PersistentCalls:
       m_Calls:
@@ -176,10 +193,55 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b17ef05fe87a084bbefd1377b4b7a67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 1038100930387280788, guid: 7d0b8fa4d74067c419f6223dcd026e92, type: 3}
+  enemyPrefab: {fileID: 5204413739882061831, guid: 2b1f7e8def20bd14387cbc99517a1696, type: 3}
   playerPrefab: {fileID: 6641856025612166232, guid: cacefa860627e874fbd4b557721db087, type: 3}
   EndLevel: {fileID: 433579530035616436, guid: 68231a35e79aefe4eaa68b259d5c65b1, type: 3}
   playerRoomIndex: 0
   vCamera: {fileID: 0}
   maxEnemySpawnPerRoom: 6
   showGizmo: 0
+--- !u!1 &6858613790232953898
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3700055642911810180}
+  - component: {fileID: 5688925343391698325}
+  m_Layer: 0
+  m_Name: LayerManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3700055642911810180
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6858613790232953898}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.1427873, y: -0.3355252, z: -0.44942987}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3217603712399834651}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5688925343391698325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6858613790232953898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e26966c97750d024ebc1356d1a710388, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelNum: 0
