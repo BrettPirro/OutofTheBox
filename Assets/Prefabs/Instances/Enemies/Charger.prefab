@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 767361540939673168}
   - component: {fileID: 4697016938771935261}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,7 +97,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7152923577824746034}
   - component: {fileID: 8602414861706175287}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: AttackBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -175,7 +175,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5204656682789340074}
   - component: {fileID: 7202973718523280334}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: LBicep
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -262,7 +262,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7856718766965442355}
   - component: {fileID: 8011128223915319537}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Neck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -349,7 +349,7 @@ GameObject:
   m_Component:
   - component: {fileID: 258009060176694837}
   - component: {fileID: 8138983008593300566}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: RForearm copy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -436,7 +436,7 @@ GameObject:
   m_Component:
   - component: {fileID: 380658288045093937}
   - component: {fileID: 5025099297289554138}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: RBicep copy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -523,7 +523,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4884786676328847193}
   - component: {fileID: 1792182856153222389}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Midsection
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -610,7 +610,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6709609502711061648}
   - component: {fileID: 3573661056674905622}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Stinger 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -699,7 +699,7 @@ GameObject:
   - component: {fileID: 2546089162757005108}
   - component: {fileID: 2814853380566168205}
   - component: {fileID: -1328360646594508733}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Charger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -738,7 +738,7 @@ CapsuleCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -818,7 +818,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6321177348990816808}
   - component: {fileID: 7157131145534301934}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Stinger 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -904,7 +904,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 864623108149836170}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Spider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -947,7 +947,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1828097050746068198}
   - component: {fileID: 3607717927459175186}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Torso
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1034,7 +1034,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8260507754185101054}
   - component: {fileID: 3735344161776853417}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: LForearm
   m_TagString: Untagged
   m_Icon: {fileID: 0}

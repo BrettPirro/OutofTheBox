@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1672622687078487378}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Brute
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52,7 +52,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1609259506345823854}
   - component: {fileID: 3091650767290080352}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: LFForeleg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -139,7 +139,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8554302726719531956}
   - component: {fileID: 971800248266422779}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: LBBicep
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -226,7 +226,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7997179716818628311}
   - component: {fileID: 5499704006607153823}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: RFBICEP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -313,7 +313,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4576187618884195484}
   - component: {fileID: 6421645927745089989}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: RFForeleg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -400,7 +400,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2398644570412805543}
   - component: {fileID: 206287787919459500}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -487,7 +487,7 @@ GameObject:
   m_Component:
   - component: {fileID: 563659842917396908}
   - component: {fileID: 5922502184737737671}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: LBBicep copy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -574,7 +574,7 @@ GameObject:
   m_Component:
   - component: {fileID: 335735173693893821}
   - component: {fileID: 8454339796009906605}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: AttackBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -652,7 +652,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6115411899717503199}
   - component: {fileID: 67314420253881836}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: LFBICEP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -741,7 +741,7 @@ GameObject:
   - component: {fileID: 4735027449092286451}
   - component: {fileID: 7059344040077622708}
   - component: {fileID: -5803576142679380456}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Brute
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -780,7 +780,7 @@ CapsuleCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -860,7 +860,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1965755597960643548}
   - component: {fileID: 6081927668543268172}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -947,7 +947,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4335639777748833312}
   - component: {fileID: 7820625607538989178}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: LBForeleg copy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1034,7 +1034,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2922063323609659738}
   - component: {fileID: 8636971155368925873}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: LBForeleg
   m_TagString: Untagged
   m_Icon: {fileID: 0}

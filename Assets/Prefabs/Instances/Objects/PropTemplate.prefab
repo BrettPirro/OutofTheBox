@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1787201747449828585}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PropTemplate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 1871932413900768184}
   - component: {fileID: 5080236487841576676}
   - component: {fileID: 872401596440899363}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}

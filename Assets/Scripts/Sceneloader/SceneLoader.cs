@@ -23,11 +23,21 @@ public class SceneLoader : MonoBehaviour
         
     }
 
+
+
+    public void loadSceneName(string name)
+    {
+        if (current.loading == false) { current.StartCoroutine(current.LoadSceneByName(0.5f, name)); }
+
+    }
+
     public void loadNextLevel(float delay)
     {
         current.StartCoroutine(current.LoadNextLevel(delay));
 
     }
+
+
 
     public void blackOut() 
     {

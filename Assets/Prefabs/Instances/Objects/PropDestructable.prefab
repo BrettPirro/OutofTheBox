@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1787201747449828585}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PropDestructable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 5080236487841576676}
   - component: {fileID: 1114090615208579048}
   - component: {fileID: 4693107132450965732}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sprite
   m_TagString: DestructProp
   m_Icon: {fileID: 0}

@@ -34,8 +34,8 @@ public class Health : MonoBehaviour
         KnockBack(dir);
         if (currentHealth - dealt < 0) { currentHealth = 0; }
         else { currentHealth -= dealt; }
-        if (this.tag == "Player") { FindObjectOfType<PlayerHealthUI>().CorrectHearts(currentHealth); }
-        if (this.tag == "Enemy") { Destroy(this.gameObject); }
+        if (this.tag == "Player") { FindObjectOfType<PlayerHealthUI>().CorrectHearts(currentHealth); if (currentHealth == 0) { SceneLoader.current.loadSceneName("GameOver"); } }
+        if (this.tag == "Enemy" && currentHealth==0) { Destroy(this.gameObject); }
     }
 
     private void KnockBack(int dir) 

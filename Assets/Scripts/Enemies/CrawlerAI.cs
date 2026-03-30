@@ -1,17 +1,41 @@
 using UnityEngine;
 using Box.Player;
+using UnityEngine.AI;
+using System;
 
 [RequireComponent(typeof(PlayerIdentifier))]
 public class CrawlerAI : MonoBehaviour
 {
-
+    [SerializeField] Transform body;
     Health health;
     PlayerAttack player;
+    NavMeshAgent agent;
+    PlayerIdentifier identifier;
+    Animator animator;
+
+
+    
+    CurrentAiState current = CurrentAiState.Wander;
+    private float timer;
+    [SerializeField] float wanderRadius;
+    [SerializeField] float wanderTimer;
+    [SerializeField] float offset=2;
+    public int damage = 1;
+    bool attackinprogress = false;
+
+
 
     private void Awake()
     {
         player = FindAnyObjectByType<PlayerAttack>();
         health = GetComponent<Health>();
+        agent = GetComponent<NavMeshAgent>();
+        identifier = GetComponent<PlayerIdentifier>();
+        animator = GetComponent<Animator>();
+        timer = wanderTimer;
+
+        agent.updateRotation = false;
+        agent.updateUpAxis = false;
 
     }
 
@@ -26,12 +50,86 @@ public class CrawlerAI : MonoBehaviour
 
     }
 
+    private void FixedUpdate()
+    {
+        switch (current) 
+        {
+            case CurrentAiState.Wander:
+                Wander();
+                break;
+            case CurrentAiState.Chase:
+                Chase();
+                break;
+            case CurrentAiState.Stun:
+                break;
+        }
+        if (agent.velocity.x > 0) { body.localScale = new Vector2(-1, 1); }
+        else if (agent.velocity.x < 0) { body.localScale = new Vector2(1, 1); }
+
+        if (identifier.AwareOfPlayer) { current = CurrentAiState.Chase; }
+        else { current = CurrentAiState.Wander; }
+
+    }
+
+    private void Wander() 
+    {
+        timer += Time.deltaTime;
+
+        if (timer >= wanderTimer)
+        {
+            Vector3 newPos = RandomNavSphere(transform.position, wanderRadius, 1);
+            agent.SetDestination(newPos);
+            timer = 0;
+        }
 
 
 
 
 
+    }
 
+    private void Chase() 
+    {
+        agent.SetDestination(player.gameObject.transform.position);
+
+        if (Vector2.Distance(player.gameObject.transform.position, transform.position) < offset) 
+        {
+            agent.isStopped = true;
+            if (attackinprogress) { return; }
+            animator.SetTrigger("Attack");
+
+        }
+        else 
+        {
+            agent.isStopped = false;
+            attackinprogress = false;
+
+        }
+
+
+    }
+
+
+
+    public static Vector3 RandomNavSphere(Vector3 origin, float distance, int layermask)
+    {
+        Vector3 randomDirection = UnityEngine.Random.insideUnitSphere * distance;
+
+        randomDirection += origin;
+
+        NavMeshHit navHit;
+
+        NavMesh.SamplePosition(randomDirection, out navHit, distance, layermask);
+
+        return navHit.position;
+    }
+
+    public void attackToggle() 
+    {
+        attackinprogress = !attackinprogress;
+    }
 
 
 }
+
+enum CurrentAiState {Wander,Chase,Stun }

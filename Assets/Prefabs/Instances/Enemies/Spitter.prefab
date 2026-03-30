@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6269105262263058863}
   - component: {fileID: 2800795560820247518}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Thigh copy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,7 +97,7 @@ GameObject:
   m_Component:
   - component: {fileID: 703250562934490670}
   - component: {fileID: 6721881196552272624}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Chest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -184,7 +184,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6543600240203778158}
   - component: {fileID: 7731331441265507491}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -271,7 +271,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2941715719943777729}
   - component: {fileID: 8466088355011871650}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Thigh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -360,7 +360,7 @@ GameObject:
   - component: {fileID: 1512097131223203018}
   - component: {fileID: 219294315122460286}
   - component: {fileID: -3803495293164071262}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Spitter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -399,7 +399,7 @@ CapsuleCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -479,7 +479,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3629423360822024299}
   - component: {fileID: 3450371934922914563}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Foreleg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -566,7 +566,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7096542079742379748}
   - component: {fileID: 7171392231320079531}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Neck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -653,7 +653,7 @@ GameObject:
   m_Component:
   - component: {fileID: 511281594482003881}
   - component: {fileID: 685381960801391357}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Trso
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -740,7 +740,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3823063566485904650}
   - component: {fileID: 5676872878202689443}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Foreleg copy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -826,7 +826,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6985155578854292331}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Spitter
   m_TagString: Untagged
   m_Icon: {fileID: 0}

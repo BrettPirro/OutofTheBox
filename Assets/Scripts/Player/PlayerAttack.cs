@@ -54,5 +54,11 @@ namespace Box.Player
             Destroy(b, 2f);
         }
 
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+            if (collision.tag == "EnemyMelee") { GetComponent<Health>().DealDamage(collision.GetComponentInParent<CrawlerAI>().damage, 0); }
+        }
+
+
     }
 }
