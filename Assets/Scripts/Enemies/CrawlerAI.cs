@@ -16,7 +16,7 @@ public class CrawlerAI : MonoBehaviour
     PlayerIdentifier identifier;
     Animator animator;
     [SerializeField] Slider healthBar;
-
+    [SerializeField] AudioClip shoot;
 
     
     CurrentAiState current = CurrentAiState.Wander;
@@ -53,12 +53,12 @@ public class CrawlerAI : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "PlayerMelee") { healthBar.gameObject.active = true; healthBar.value= health.currentHealthReturn(); health.DealDamage(player.attackAmount, Mathf.RoundToInt(player.gameObject.GetComponent<PlayerMovement>().body.transform.localScale.x)); }
+        if (collision.tag == "PlayerMelee") { healthBar.gameObject.active = true; health.DealDamage(player.attackAmount, Mathf.RoundToInt(player.gameObject.GetComponent<PlayerMovement>().body.transform.localScale.x)); healthBar.value = health.currentHealthReturn(); }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "PlayerRange") { healthBar.gameObject.active = true; healthBar.value = health.currentHealthReturn(); health.DealDamage(player.rangeAmount, 0); }
+        if (collision.gameObject.tag == "PlayerRange") { healthBar.gameObject.active = true;  health.DealDamage(player.rangeAmount, 0); healthBar.value = health.currentHealthReturn(); }
 
     }
 
@@ -151,6 +151,7 @@ public class CrawlerAI : MonoBehaviour
 
         GameObject b = Instantiate(projectile, shootPoint.position, currentRot);
         b.GetComponent<Rigidbody2D>().AddForce((Vector2.left * body.transform.localScale.x) * 1f, ForceMode2D.Impulse);
+        AudioSource.PlayClipAtPoint(shoot, this.transform.position);
         Destroy(b, 2f);
     }
 

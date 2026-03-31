@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class Health : MonoBehaviour
@@ -7,6 +8,7 @@ public class Health : MonoBehaviour
     [SerializeField] float knockBack;
     int currentHealth;
     Rigidbody2D rb;
+    [SerializeField]List<AudioClip> hurtSounds;
 
 
     private void Awake()
@@ -34,7 +36,15 @@ public class Health : MonoBehaviour
         KnockBack(dir);
         if (currentHealth - dealt < 0) { currentHealth = 0; }
         else { currentHealth -= dealt; }
-        if (this.tag == "Player") { FindObjectOfType<PlayerHealthUI>().CorrectHearts(currentHealth); if (currentHealth == 0) { SceneLoader.current.loadSceneName("GameOver"); } }
+        if (this.tag == "Player") 
+        { 
+
+            FindObjectOfType<PlayerHealthUI>().CorrectHearts(currentHealth); 
+            
+            if (currentHealth == 0) { SceneLoader.current.loadSceneName("GameOver"); } 
+        }
+        AudioSource.PlayClipAtPoint(hurtSounds[Random.Range(0,hurtSounds.Count)], this.transform.position);
+
         if (this.tag == "Enemy" && currentHealth==0) { Destroy(this.gameObject); }
     }
 

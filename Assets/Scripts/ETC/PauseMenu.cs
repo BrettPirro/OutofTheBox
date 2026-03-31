@@ -1,16 +1,18 @@
+using Box.Player;
 using UnityEngine;
 
 public class PauseMenu : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    bool paused = false;
+    [SerializeField] GameObject pauseMenu;
+
+    public void PauseGame() 
     {
-        
+        paused = (!paused);
+        GetComponent<PlayerMovement>().toggleMovement(paused);
+        pauseMenu.SetActive(paused);
+
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
 }

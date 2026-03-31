@@ -40,6 +40,12 @@ namespace Box.Player
             stopMoving = (!stopMoving);
         }
 
+        public void toggleMovement(bool tog)
+        {
+            stopMoving = tog;
+        }
+
+
         public void increaseLight(float increase) 
         {
             light.pointLightOuterRadius += increase;

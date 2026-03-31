@@ -1,8 +1,9 @@
-using UnityEngine;
-using UnityEngine.UI;
 using System.Collections;
-using UnityEngine.InputSystem;
 using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.UI;
+using static UnityEditor.Recorder.OutputPath;
 
 public class BoxEndLevelObj : MonoBehaviour
 {
@@ -17,6 +18,8 @@ public class BoxEndLevelObj : MonoBehaviour
     bool pressed = false;
     [SerializeField] List<Sprite> sprites = new List<Sprite>();
     [SerializeField] SpriteRenderer renderer;
+
+    [SerializeField] AudioClip boxSound;
 
     private void Awake()
     {
@@ -96,7 +99,8 @@ public class BoxEndLevelObj : MonoBehaviour
         
             if(loadedLevel != 4) 
             {
-                 FindObjectOfType<BinaryRoomGen>().NextLevel();
+                AudioSource.PlayClipAtPoint(boxSound, this.transform.position);
+                FindObjectOfType<BinaryRoomGen>().NextLevel();
 
             }
         }

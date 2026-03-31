@@ -129,6 +129,7 @@ MonoBehaviour:
   - {fileID: -126400848343142536, guid: e7ccc1cf62f272246aed75e74b00f9d0, type: 3}
   - {fileID: -882044495795524945, guid: 2e356c33a236ff04e9e31eb48991cddf, type: 3}
   renderer: {fileID: 4170872358590149306}
+  boxSound: {fileID: 8300000, guid: 8761ab98a1637e849bab3ca578fe68fa, type: 3}
 --- !u!95 &3338390592390562187
 Animator:
   serializedVersion: 7

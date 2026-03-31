@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 namespace Box.Player 
 {
@@ -11,6 +12,10 @@ namespace Box.Player
         [SerializeField] Transform arrowSpawn;
         public int attackAmount = 1;
         public int rangeAmount = 1;
+
+        [SerializeField] AudioClip shoot;
+        [SerializeField] List<AudioClip> sword;
+
 
         private void Start()
         {
@@ -51,6 +56,7 @@ namespace Box.Player
 
             GameObject b = Instantiate(Arrow, arrowSpawn.transform.position, currentRot);
             b.GetComponent<Rigidbody2D>().AddForce((Vector2.left*GetComponent<PlayerMovement>().body.transform.localScale.x) * 1f, ForceMode2D.Impulse);
+            AudioSource.PlayClipAtPoint(shoot, this.transform.position);
             Destroy(b, 2f);
         }
 
@@ -65,6 +71,10 @@ namespace Box.Player
 
         }
 
+        public void PlayRandomSwordSound() 
+        {
+            AudioSource.PlayClipAtPoint(sword[Random.Range(0,sword.Count)], this.transform.position);
+        }
 
 
     }

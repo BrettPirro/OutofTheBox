@@ -23,11 +23,14 @@ namespace Box.Player
         InputAction move;
         InputAction melee;
         InputAction range;
+        InputAction pause;
         Action<Vector2> updatePlayerVelocity;
         Action playerMeleeAttacking;
         Action playerRangeAttacking;
+        Action playerPause;
 
-        int potions=0;
+
+        int potions =0;
         int boxes = 0;
 
 
@@ -41,12 +44,16 @@ namespace Box.Player
             move = inputs.Player.Move;
             melee = inputs.Player.Attack;
             range = inputs.Player.Range;
+            pause = inputs.Player.Pause;
             melee.Enable();
             move.Enable();
             range.Enable();
+            pause.Enable();
             playerRangeAttacking += GetComponent<PlayerAttack>().RangeAttack;
             updatePlayerVelocity += GetComponent<PlayerMovement>().updatePlayerVelocity;
             playerMeleeAttacking += GetComponent<PlayerAttack>().MeleeAttack;
+            playerPause += GetComponent<PauseMenu>().PauseGame;
+
 
         }
 
@@ -55,9 +62,12 @@ namespace Box.Player
             melee.Disable();
             move.Disable();
             range.Disable();
+            pause.Disable();
             playerRangeAttacking -= GetComponent<PlayerAttack>().RangeAttack;
             updatePlayerVelocity -= GetComponent<PlayerMovement>().updatePlayerVelocity;
             playerMeleeAttacking -= GetComponent<PlayerAttack>().MeleeAttack;
+            playerPause -= GetComponent<PauseMenu>().PauseGame;
+
 
         }
 
@@ -70,9 +80,16 @@ namespace Box.Player
 
             if (melee.IsPressed()) { playerMeleeAttacking(); }
             else if (range.IsPressed()) { playerRangeAttacking(); }
+
         }
 
-    
+
+        private void Update()
+        {
+            if (pause.WasPressedThisFrame()) { playerPause(); }
+
+        }
+
         public void usePotions() 
         {
             if (potions <= 0) { return; }

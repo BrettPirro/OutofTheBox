@@ -1192,7 +1192,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5565678974786079905}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -1262,9 +1262,10 @@ MonoBehaviour:
   shootPoint: {fileID: 0}
   projectile: {fileID: 0}
   healthBar: {fileID: 6650140106495577267}
+  shoot: {fileID: 0}
   wanderRadius: 10
   wanderTimer: 2
-  offset: 3
+  offset: 2
   damage: 1
 --- !u!114 &8989310305918762169
 MonoBehaviour:
@@ -1280,6 +1281,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 4
   knockBack: 0.6
+  hurtSounds:
+  - {fileID: 8300000, guid: 3faf498001c6e35429f7d5d009beb5d6, type: 3}
 --- !u!195 &470933625974193981
 NavMeshAgent:
   m_ObjectHideFlags: 0
