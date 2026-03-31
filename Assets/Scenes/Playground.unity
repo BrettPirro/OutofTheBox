@@ -399,6 +399,34 @@ PrefabInstance:
       propertyPath: vCamera
       value: 
       objectReference: {fileID: 5928247835723649511}
+    - target: {fileID: 6568448651664093834, guid: 7953c5976530651458bf3eb75f198881, type: 3}
+      propertyPath: showGizmo
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6568448651664093834, guid: 7953c5976530651458bf3eb75f198881, type: 3}
+      propertyPath: maxEnemySpawnPerRoom
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6568448651664093834, guid: 7953c5976530651458bf3eb75f198881, type: 3}
+      propertyPath: enemyPrefab.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6568448651664093834, guid: 7953c5976530651458bf3eb75f198881, type: 3}
+      propertyPath: 'enemyPrefab.Array.data[0]'
+      value: 
+      objectReference: {fileID: 5204413739882061831, guid: 2b1f7e8def20bd14387cbc99517a1696, type: 3}
+    - target: {fileID: 6568448651664093834, guid: 7953c5976530651458bf3eb75f198881, type: 3}
+      propertyPath: 'enemyPrefab.Array.data[1]'
+      value: 
+      objectReference: {fileID: 5806934447466449253, guid: bd619d456c30f1c4d9d04af36de8413a, type: 3}
+    - target: {fileID: 6568448651664093834, guid: 7953c5976530651458bf3eb75f198881, type: 3}
+      propertyPath: 'enemyPrefab.Array.data[2]'
+      value: 
+      objectReference: {fileID: 5565678974786079905, guid: 1461c6a98f9641944afa4dda9706d212, type: 3}
+    - target: {fileID: 6568448651664093834, guid: 7953c5976530651458bf3eb75f198881, type: 3}
+      propertyPath: 'enemyPrefab.Array.data[3]'
+      value: 
+      objectReference: {fileID: 6420008540113273965, guid: 56136dfd12b836d48a660f8ad013ab17, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

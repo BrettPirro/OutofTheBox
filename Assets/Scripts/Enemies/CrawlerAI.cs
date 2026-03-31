@@ -7,6 +7,8 @@ using System;
 public class CrawlerAI : MonoBehaviour
 {
     [SerializeField] Transform body;
+    [SerializeField] Transform shootPoint;
+    [SerializeField] GameObject projectile;
     Health health;
     PlayerAttack player;
     NavMeshAgent agent;
@@ -128,6 +130,20 @@ public class CrawlerAI : MonoBehaviour
     {
         attackinprogress = !attackinprogress;
     }
+
+
+    public void SpawnProjectile()
+    {
+        var currentRot = Quaternion.EulerRotation(new Vector3(90, 0, 0));
+
+        if (transform.localScale.x == 1) { currentRot = transform.rotation; }
+
+
+        GameObject b = Instantiate(projectile, shootPoint.position, currentRot);
+        b.GetComponent<Rigidbody2D>().AddForce((Vector2.left * body.transform.localScale.x) * 1f, ForceMode2D.Impulse);
+        Destroy(b, 2f);
+    }
+
 
 
 }

@@ -10,6 +10,8 @@ TagManager:
   - Wall
   - Enemy
   - DestructProp
+  - EnemyMelee
+  - EnemyRange
   layers:
   - Default
   - TransparentFX

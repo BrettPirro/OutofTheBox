@@ -12,7 +12,8 @@ using NUnit.Framework.Constraints;
 public class AgentPlacer : MonoBehaviour
 {
     [SerializeField]
-    private GameObject enemyPrefab, playerPrefab,EndLevel;
+    private GameObject playerPrefab,EndLevel;
+    [SerializeField]List<GameObject> enemyPrefab = new List<GameObject>();
 
     [SerializeField]
     private int playerRoomIndex;
@@ -109,7 +110,8 @@ public class AgentPlacer : MonoBehaviour
             {
                 return;
             }
-            GameObject enemy = Instantiate(enemyPrefab);
+            GameObject enemy;
+            enemy = Instantiate(enemyPrefab[Random.Range(0,enemyPrefab.Count)]);
             enemy.transform.localPosition = (Vector2)room.PositionsAccessibleFromPath[k] + Vector2.one * 0.5f;
             room.EnemiesInTheRoom.Add(enemy);
         }
