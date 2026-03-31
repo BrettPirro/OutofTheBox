@@ -18,7 +18,7 @@ public class Health : MonoBehaviour
 
     private void Start()
     {
-        if(this.tag == "Player") { FindObjectOfType<PlayerHealthUI>().AddHearts(maxHealth); }
+        if (this.tag == "Player") { FindObjectOfType<PlayerHealthUI>().AddHearts(maxHealth); }
     }
 
 
@@ -45,14 +45,19 @@ public class Health : MonoBehaviour
 
     public void IncreaseHealth(int increase) 
     {
-        if (this.tag != "Player") { return; }
+   
         maxHealth += increase;
         if (currentHealth + 1 > maxHealth) { currentHealth = maxHealth; }
         else { currentHealth += 1; }
-
+        var hearts = FindObjectOfType<PlayerHealthUI>();
+        hearts.AddHearts(maxHealth);
+        hearts.CorrectHearts(currentHealth); 
     }
 
-    
+    public int currentHealthReturn() 
+    {
+        return currentHealth;
+    }
 
 
 }

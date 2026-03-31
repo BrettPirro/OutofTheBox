@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 
 namespace Box.Player 
@@ -9,11 +10,13 @@ namespace Box.Player
 
     public class PlayerMovement : MonoBehaviour
     {
-        [SerializeField][Range(0, 100)] float speed = 7f;
+        [Range(0, 100)] public float speed = 7f;
         Rigidbody2D rb;
         public Transform body;
         Animator animator;
         bool stopMoving = false;
+        [SerializeField]Light2D light;
+        
 
         private void Awake()
         {
@@ -36,6 +39,14 @@ namespace Box.Player
         {
             stopMoving = (!stopMoving);
         }
+
+        public void increaseLight(float increase) 
+        {
+            light.pointLightOuterRadius += increase;
+        }
+
+
+
 
     }
 

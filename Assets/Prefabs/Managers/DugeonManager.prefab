@@ -193,9 +193,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b17ef05fe87a084bbefd1377b4b7a67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 5204413739882061831, guid: 2b1f7e8def20bd14387cbc99517a1696, type: 3}
   playerPrefab: {fileID: 6641856025612166232, guid: cacefa860627e874fbd4b557721db087, type: 3}
   EndLevel: {fileID: 433579530035616436, guid: 68231a35e79aefe4eaa68b259d5c65b1, type: 3}
+  enemyPrefab:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   playerRoomIndex: 0
   vCamera: {fileID: 0}
   maxEnemySpawnPerRoom: 6

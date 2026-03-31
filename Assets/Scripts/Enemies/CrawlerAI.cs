@@ -2,6 +2,7 @@ using UnityEngine;
 using Box.Player;
 using UnityEngine.AI;
 using System;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(PlayerIdentifier))]
 public class CrawlerAI : MonoBehaviour
@@ -14,6 +15,7 @@ public class CrawlerAI : MonoBehaviour
     NavMeshAgent agent;
     PlayerIdentifier identifier;
     Animator animator;
+    [SerializeField] Slider healthBar;
 
 
     
@@ -39,16 +41,24 @@ public class CrawlerAI : MonoBehaviour
         agent.updateRotation = false;
         agent.updateUpAxis = false;
 
+
     }
 
+    private void Start()
+    {
+
+        healthBar.maxValue = health.currentHealthReturn();
+        healthBar.value = health.currentHealthReturn();
+        healthBar.gameObject.active=false;
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "PlayerMelee") { health.DealDamage(player.attackAmount, Mathf.RoundToInt(player.gameObject.GetComponent<PlayerMovement>().body.transform.localScale.x)); }
+        if (collision.tag == "PlayerMelee") { healthBar.gameObject.active = true; healthBar.value= health.currentHealthReturn(); health.DealDamage(player.attackAmount, Mathf.RoundToInt(player.gameObject.GetComponent<PlayerMovement>().body.transform.localScale.x)); }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "PlayerRange") { health.DealDamage(player.rangeAmount, 0); }
+        if (collision.gameObject.tag == "PlayerRange") { healthBar.gameObject.active = true; healthBar.value = health.currentHealthReturn(); health.DealDamage(player.rangeAmount, 0); }
 
     }
 

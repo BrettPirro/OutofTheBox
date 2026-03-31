@@ -16,9 +16,10 @@ public class PlayerHealthUI : MonoBehaviour
     {
         foreach (var hearts in HeartsSpawned)
         {
+     
             Destroy(hearts.gameObject);
-            HeartsSpawned.Remove(hearts);
         }
+        if (HeartsSpawned.Count !=0) { HeartsSpawned.Clear(); }
 
         for (int i = 0; i < added; i++)
         {

@@ -1,6 +1,10 @@
 using System;
+using TMPro;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 
 
@@ -10,6 +14,11 @@ namespace Box.Player
     [RequireComponent(typeof(PlayerAttack))]
     public class PlayerInput : MonoBehaviour
     {
+        [SerializeField] TMP_Text boxText;
+        [SerializeField] TMP_Text potionText;
+
+
+
         InputSystem_Actions inputs;
         InputAction move;
         InputAction melee;
@@ -17,6 +26,9 @@ namespace Box.Player
         Action<Vector2> updatePlayerVelocity;
         Action playerMeleeAttacking;
         Action playerRangeAttacking;
+
+        int potions=0;
+        int boxes = 0;
 
 
         private void Awake()
@@ -61,7 +73,36 @@ namespace Box.Player
         }
 
     
+        public void usePotions() 
+        {
+            if (potions <= 0) { return; }
+            GetComponent<Health>().Heal(2);
+            potions -= 1;
+            potionText.text = potions.ToString();
 
+        }
+
+        public void useBox()
+        {
+            if (boxes <= 0) { return; }
+            if (Random.Range(0, 10) > 9) { SceneLoader.current.loadSceneName("GameWon"); }
+            boxes -= 1;
+            boxText.text = boxes.ToString();
+
+        }
+
+
+        public void AddBox(int num) 
+        {
+            boxes += num;
+            boxText.text = boxes.ToString();
+        }
+
+        public void AddPotions(int num)
+        {
+            potions += num;
+            potionText.text = potions.ToString();
+        }
 
     }
 
