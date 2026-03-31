@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7402ef6e6b26c2c48838792abee4c3ab, type: 3}
   m_Name: Level 4
   m_EditorClassIdentifier: 
-  wallTopTile: {fileID: 11400000, guid: 1bdab7d62eb624445a8c5e89b5a87d31, type: 2}
-  wallSideRightTile: {fileID: 11400000, guid: 62cd616eb3af10f4caaea3373da6362a, type: 2}
-  wallSideLeftTile: {fileID: 11400000, guid: ab0478c6f006935438dcf709c21e746d, type: 2}
-  wallBottpmTile: {fileID: 11400000, guid: 3d648ceb1cefb3f4eb22adee5d1aca8c, type: 2}
-  wallFull: {fileID: 11400000, guid: 8f3224d2674619d48bf5b2d68e6a7173, type: 2}
-  wallinnercornerDownLeft: {fileID: 11400000, guid: 239dbd28cc25d1a4e965c8ca687cd922, type: 2}
-  wallinnercornerDownRight: {fileID: 11400000, guid: 20d67335f8e5cb648a40124a9802824b, type: 2}
-  wallDiagonalCornerDownRight: {fileID: 11400000, guid: 348d36485c9ca7b4bb7388179f9e5dc9, type: 2}
-  wallDiagonalCornerDownLeft: {fileID: 11400000, guid: 0458015f761841f429df7187f3a8ec96, type: 2}
-  wallDiagonalCornerUpRight: {fileID: 11400000, guid: 030b0ba530d084b40848fdeab5d6a605, type: 2}
-  wallDiagonalCornerUpLeft: {fileID: 11400000, guid: 243774da503b7134bb1357622a935fec, type: 2}
-  Floor: {fileID: 11400000, guid: fbd87761fc34db9408e49714d7325183, type: 2}
+  wallTopTile: {fileID: 11400000, guid: 365bef2c7c00af742a33edd6b09c9c90, type: 2}
+  wallSideRightTile: {fileID: 11400000, guid: 8f7aafc431458e94eaa880d67ddd07e6, type: 2}
+  wallSideLeftTile: {fileID: 11400000, guid: d158b25e47efffe4ba5f3da553dc8bcc, type: 2}
+  wallBottpmTile: {fileID: 11400000, guid: fc49f5811877f9243b1cc6bc21aa75ea, type: 2}
+  wallFull: {fileID: 11400000, guid: d8d1cf2710ebed44592284406a687852, type: 2}
+  wallinnercornerDownLeft: {fileID: 11400000, guid: 116d6af900610cf4d945bba041d7f665, type: 2}
+  wallinnercornerDownRight: {fileID: 11400000, guid: fccbbd36121473b44b188e304b7348d0, type: 2}
+  wallDiagonalCornerDownRight: {fileID: 11400000, guid: f721b9b902553354fa6f2ed346ec3097, type: 2}
+  wallDiagonalCornerDownLeft: {fileID: 11400000, guid: b91e6a7d863de1143842076534d0f80b, type: 2}
+  wallDiagonalCornerUpRight: {fileID: 11400000, guid: 5c9888dbdf0eee542ac089510325f9ef, type: 2}
+  wallDiagonalCornerUpLeft: {fileID: 11400000, guid: d634c8aac6a412144b3bcdaa9a6400ef, type: 2}
+  Floor: {fileID: 11400000, guid: cc722b24dc700f74697ac12c75728880, type: 2}
