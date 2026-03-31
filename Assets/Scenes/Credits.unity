@@ -658,7 +658,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -225892830, guid: 58c4f6616b520884eaaf0f72ee13c4c7, type: 3}
+  m_Sprite: {fileID: -8116853776806524188, guid: 86e28dcc05a15004aa489c1b455ad93f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -808,13 +808,13 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1335034758}
-  m_LocalRotation: {x: 0.37796798, y: 0.1787255, z: -0.16641337, w: -0.8930309}
+  m_LocalRotation: {x: 0.3887894, y: 0.17326337, z: -0.18066947, w: -0.88666856}
   m_LocalPosition: {x: 0, y: 0, z: 15}
   m_LocalScale: {x: 0.72592, y: 0.72592, z: 0.72592}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1053029620}
-  m_LocalEulerAnglesHint: {x: -37.995, y: 325.619, z: 33.271}
+  m_LocalEulerAnglesHint: {x: -38.818, y: 324.924, z: 35.741}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -280, y: 147}
@@ -909,7 +909,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -226.80096, w: -376.63806}
+  m_margin: {x: 0, y: 0, z: -226.80096, w: -380.15973}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
